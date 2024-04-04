@@ -10,32 +10,36 @@ namespace Projeto2
     {
         static void Main(string[] args)
         {
-            string[] valores = Console.ReadLine().Split(' ');
-            int x = int.Parse(valores[0]);
-            int y = int.Parse(valores[1]);
+             Console.WriteLine("Digite duas cordenadas: (x e y)");
+             string[] numeros = Console.ReadLine().Split(' ');
+             int num1 = int.Parse(numeros[0]);
+             int num2 = int.Parse(numeros[1]);
 
-            while (x != 0 && y != 0)
-            {
-                if (x > 0 && y > 0)
-                {
-                    Console.WriteLine("primeiro");
-                }
-                else if (x < 0 && y > 0)
-                {
-                    Console.WriteLine("segundo");
-                }
-                else if (x < 0 && y < 0)
-                {
-                    Console.WriteLine("terceiro");
-                }
-                else
-                {
-                    Console.WriteLine("quarto");
-                }
-                valores = Console.ReadLine().Split(' ');
-                x = int.Parse(valores[0]);
-                y = int.Parse(valores[1]);
-            }
+
+             while (num1 != 0 && num2 != 0)
+             {
+             if (num1 >= 0 && num2 >= 0)
+             {
+                 Console.WriteLine("Primeiro quadrante");
+             }
+             else if (num1 >= 0 && num2 <= 0)
+             {
+                 Console.WriteLine("Quarto quadrante");
+             }
+                 else if (num1 <= 0 && num2 <= 0)
+             {
+                 Console.WriteLine("Terceiro quadrante");
+             }
+             else
+             {
+                 Console.WriteLine("Segundo quadrante");
+             }
+             numeros = Console.ReadLine().Split(' ');
+             num1 = int.Parse(numeros[0]);
+             num2 = int.Parse(numeros[1]);
+             }
+             Console.WriteLine("Não foi possivel consultar qual quadrante suas cordenadas estão");
+            
         }
     }
 }
